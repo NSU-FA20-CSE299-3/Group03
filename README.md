@@ -12,7 +12,7 @@
 <p align="center"><strong>Name</strong><strong>:</strong> Md. Abir Hossain </p>
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1731597042</p>
 <p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:abir.hossain04@northsouth.edu"> abir.hossain04@northsouth.edu </a></p>
-<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-FA20-CSE299-3/Group04">https://github.com/NSU-FA20-CSE299-3/Group03</a></p>
+<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-FA20-CSE299-3/Group03">https://github.com/NSU-FA20-CSE299-3/Group03</a></p>
 <p align="center"><strong>Date Prepared</strong><strong>: </strong>13/11/2020</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
