@@ -19,6 +19,10 @@
 
 <p><strong>INTRODUCTION</strong></p>
 <p align=”justify”>In this modern global economy e-commerce platforms are getting more and more popular. Because e-commerce offers better marketing opportunities, more convenient, reduces cost and can make anyone’s business global. Here store remains open all the time. Users can order anything anytime, and it also have maximum security of transaction. Through this platform anyone can easily keep in touch with their customers. </p>
+<p align = "justify">I am planning to make an android application which will have all the functionalities of a
+modern e-commerce platform. Here users will find their various types of products such
+as clothing, shoes, watch, computer/laptop, jewelry, vehicle etc. They will make their
+own account in this app and from their account they will be able to order these</p>
 
 
 <p align=”justify”><strong>FEATURES</strong></p>
@@ -43,6 +47,7 @@
 
 <p><em>Frontend: </em></p>
 <p align=”justify”>Android Studio is the official Integrated Development Environment (IDE) for Android app development. Android Studio offers features that enhance our productivity when building Android apps. I am going to use android studio to design my app and will use java to handle various operations. I will design buttons, images, layout, input field etc using Android Studio for this I will need XML.</p>
+
 
 <p><em>Backend: </em></p>
 <p align=”justify”>Firebase is Google’s mobile application development platform that helps us build, improve, and grow our app. Firebase lets us handle Email & password & Real-time data, Gives us Built-in security, Allows us file storage backed by Google Cloud Storage. I am going to use firebase as my database. And using firebase I’m going to handle backend.</p>
