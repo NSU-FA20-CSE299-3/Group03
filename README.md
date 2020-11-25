@@ -19,7 +19,7 @@
 
 <p><strong>INTRODUCTION</strong></p>
 <p align=”justify”>In this modern global economy e-commerce platforms are getting more and more popular. Because e-commerce offers better marketing opportunities, more convenient, reduces cost and can make anyone’s business global. Here store remains open all the time. Users can order anything anytime, and it also have maximum security of transaction. Through this platform anyone can easily keep in touch with their customers. </p>
-<p align=”justify”>In this modern global economy e-commerce platforms are getting more and more popular. Because e-commerce offers better marketing opportunities, more convenient, reduces cost and can make anyone’s business global. Here store remains open all the time. Users can order anything anytime, and it also have maximum security of transaction. Through this platform anyone can easily keep in touch with their customers. </p>
+
 
 <p align=”justify”><strong>FEATURES</strong></p>
 <ul>
