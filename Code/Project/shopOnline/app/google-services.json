@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "992788082763",
+    "project_id": "shop-online-e7bf0",
+    "storage_bucket": "shop-online-e7bf0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992788082763:android:d1e1da62f28154b2ee9dce",
+        "android_client_info": {
+          "package_name": "com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992788082763-9l6dh473iso61rg0lpdutno4cjuagdoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqZo3JtzZ7BGmI1Nv-9RTPnQP__XOHR8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992788082763-9l6dh473iso61rg0lpdutno4cjuagdoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

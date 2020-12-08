@@ -1,4 +1,4 @@
-package com.abirhossain.nsu.fall2020.cse299.sec03.group03.e_commerce;
+package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
-
-import static android.widget.Toast.*;
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -106,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 {
                                     if (task.isSuccessful())
                                     {
-                                        Toast.makeText(RegisterActivity.this, "Congratulations, Your Account has been Created Successfully.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Account created successfully", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -115,16 +115,16 @@ public class RegisterActivity extends AppCompatActivity {
                                     else
                                     {
                                         loadingBar.dismiss();
-                                        Toast.makeText(RegisterActivity.this, "Network Error: Please try again after sometime!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Check Your Network Connection", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                 }
                 else
                 {
-                    Toast.makeText(RegisterActivity.this, "This " + phone + " Already Exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Number already exists", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(RegisterActivity.this, "Please Create an account using another Phone Number.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Use another phone number to create the account", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
