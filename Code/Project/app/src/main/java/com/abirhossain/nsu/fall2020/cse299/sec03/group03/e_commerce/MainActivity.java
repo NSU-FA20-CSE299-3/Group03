@@ -18,6 +18,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         signUpNowButton = (Button)findViewById(R.id.get_started_Signup);
         loginNowButton = (Button)findViewById(R.id.get_started_login);
+        signUpNowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registerActivityIntent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(registerActivityIntent);
+            }
+        });
+
         loginNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
