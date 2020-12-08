@@ -1,9 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterAcitivity">
+    tools:context=".RegisterActivity"
+    android:background="@drawable/welcome"
+    android:padding="15dp"
+    >
+    <TextView
+        android:id="@+id/SignUpHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center"
+        android:textColor="#DFD2D2"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        />
+    <EditText
+        android:id="@+id/SignUp_UserName_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="text"
+        android:layout_below="@+id/SignUpHeaderText"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:hint="Enter Your Name"
+        />
+    <EditText
+        android:id="@+id/SignUp_phone_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:layout_below="@+id/SignUp_UserName_input"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:hint="Enter Your Phone Number"
+        />
+    <EditText
+        android:id="@+id/signUp_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/SignUp_phone_number_input"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:inputType="textPassword"
+        android:hint="Enter Your Password"
+        />
+    <Button
+        android:id="@+id/SignUp_Page_SignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUp_password_input"
+        android:background="@drawable/buttons"
+        android:padding="12dp"
+        android:textSize="15sp"
+        android:text="SignUp"
+        android:layout_marginTop="15dp"
+
+        />
+
+</RelativeLayout>
