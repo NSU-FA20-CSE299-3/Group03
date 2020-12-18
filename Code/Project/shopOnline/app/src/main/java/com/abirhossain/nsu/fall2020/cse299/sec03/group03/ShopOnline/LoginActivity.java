@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -85,7 +86,8 @@ public class LoginActivity extends AppCompatActivity {
                         if (userData.getPassword().equals(password)){
                             Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
-                            
+                            Intent loginActivityIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                            startActivity(loginActivityIntent);
                         }
                     }
 
