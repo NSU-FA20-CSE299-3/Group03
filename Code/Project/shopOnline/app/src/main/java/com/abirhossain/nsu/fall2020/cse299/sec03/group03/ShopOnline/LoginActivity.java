@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 
@@ -55,7 +58,16 @@ public class LoginActivity extends AppCompatActivity {
             loadingBar.setMessage("Please Wait while we check the credentials");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
+
+            allowAccess(userPhone,userPass);
         }
+
+    }
+
+    private void allowAccess(String userPhone, String userPass) {
+
+        final DatabaseReference RootRef;
+        RootRef = FirebaseDatabase.getInstance().getReference();
 
     }
 
