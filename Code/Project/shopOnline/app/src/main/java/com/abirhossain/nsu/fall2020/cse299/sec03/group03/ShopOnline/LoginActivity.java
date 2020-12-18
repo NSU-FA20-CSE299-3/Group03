@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ModelClasses.Users;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -70,15 +71,23 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private void allowAccess(String userPhone, String userPass) {
+    private void allowAccess(String phone, String password) {
 
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.child(PhnDb).child(userPhone).exists()){
+                if(snapshot.child(PhnDb).child(phone).exists()){
 
+                    Users userData = snapshot.child(PhnDb).child(phone).getValue(Users.class);
+                    if (userData.getPhone().equals(phone)){
+                        if (userData.getPassword().equals(password)){
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            loadingBar.dismiss();
+                            
+                        }
+                    }
 
 
                 }
