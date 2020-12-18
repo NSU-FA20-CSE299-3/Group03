@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.makeText;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -37,7 +41,21 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void loginUser() {
-        
+        String userPhone = InputNumber.getText().toString();
+        String userPass = InputPassword.getText().toString();
+
+        if(TextUtils.isEmpty(userPhone)){
+            makeText(this,"Please Enter Your Phone Number", LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(userPass)){
+            makeText(this,"Please Enter Your Password", LENGTH_SHORT).show();
+        }
+        else {
+            loadingBar.setTitle("Logging Into Your Account");
+            loadingBar.setMessage("Please Wait while we check the credentials");
+            loadingBar.setCanceledOnTouchOutside(false);
+            loadingBar.show();
+        }
 
     }
 
