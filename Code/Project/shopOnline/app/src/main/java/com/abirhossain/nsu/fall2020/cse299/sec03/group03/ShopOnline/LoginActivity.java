@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
 
+import io.paperdb.Paper;
+
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 
@@ -41,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         LoginBtn = findViewById(R.id.Login_Page_login);
         loadingBar = new ProgressDialog(this);
         checkBox = findViewById(R.id.remembeMe_chkbox);
+        Paper.init(this);
 
         LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
