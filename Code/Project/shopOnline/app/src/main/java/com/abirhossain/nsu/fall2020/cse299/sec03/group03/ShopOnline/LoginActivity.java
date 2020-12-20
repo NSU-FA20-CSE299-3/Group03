@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rey.material.widget.CheckBox;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
@@ -29,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button LoginBtn;
     private ProgressDialog loadingBar;
     private String PhnDb = "Users";
+    private CheckBox checkBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         InputPassword = findViewById(R.id.login_password_input);
         LoginBtn = findViewById(R.id.Login_Page_login);
         loadingBar = new ProgressDialog(this);
+        checkBox = findViewById(R.id.remembeMe_chkbox);
 
         LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
