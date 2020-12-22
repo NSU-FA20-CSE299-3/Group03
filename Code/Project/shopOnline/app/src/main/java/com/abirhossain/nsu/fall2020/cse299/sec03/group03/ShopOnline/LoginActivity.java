@@ -72,6 +72,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        nonAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginBtn.setText("Login");
+                admin.setVisibility(View.VISIBLE);
+                nonAdmin.setVisibility(View.INVISIBLE);
+                PhnDb = "Users";
+            }
+        });
+
 
 
 
