@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ModelClasses.Users;
@@ -32,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText InputNumber, InputPassword;
     private Button LoginBtn;
     private ProgressDialog loadingBar;
+    private TextView admin, nonAdmin;
+
     private String PhnDb = "Users";
     private CheckBox checkBox;
 
@@ -42,14 +45,30 @@ public class LoginActivity extends AppCompatActivity {
         InputNumber = findViewById(R.id.login_phone_number_input);
         InputPassword = findViewById(R.id.login_password_input);
         LoginBtn = findViewById(R.id.Login_Page_login);
+        admin = findViewById(R.id.EnterAdminPanel);
+        nonAdmin = findViewById(R.id.EnterNonAdminPanel);
+
         loadingBar = new ProgressDialog(this);
         checkBox = findViewById(R.id.remembeMe_chkbox);
         Paper.init(this);
+
+
 
         LoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loginUser();
+            }
+        });
+
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginBtn.setText("Admin Login");
+                admin.setVisibility(View.INVISIBLE);
+                nonAdmin.setVisibility(View.VISIBLE);
+                PhnDb = "Admins";
+
             }
         });
 
