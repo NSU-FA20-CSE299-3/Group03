@@ -125,10 +125,18 @@ public class LoginActivity extends AppCompatActivity {
                     Users userData = snapshot.child(PhnDb).child(phone).getValue(Users.class);
                     if (userData.getPhone().equals(phone)){
                         if (userData.getPassword().equals(password)){
-                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
-                            Intent loginActivityIntent = new Intent(LoginActivity.this, HomeActivity.class);
-                            startActivity(loginActivityIntent);
+
+                            if(PhnDb.equals("Admins")){
+                                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                            }
+                            else if (PhnDb.equals("Users")){
+                                Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                            }
+
                         }
                         else {
 
