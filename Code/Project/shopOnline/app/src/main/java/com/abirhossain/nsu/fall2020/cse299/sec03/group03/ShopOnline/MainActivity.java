@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import io.paperdb.Paper;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button signUpNowButton, loginNowButton;
@@ -17,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         signUpNowButton = (Button)findViewById(R.id.get_started_Signup);
         loginNowButton = (Button)findViewById(R.id.get_started_login);
+
+        Paper.init(this);
+
+
         signUpNowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
