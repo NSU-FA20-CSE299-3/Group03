@@ -3,6 +3,7 @@ package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class AdminAddNewProduct extends AppCompatActivity {
 
@@ -10,5 +11,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_new_product);
+
+        Toast.makeText(this, "Welcome Admin", Toast.LENGTH_SHORT).show();
     }
 }
