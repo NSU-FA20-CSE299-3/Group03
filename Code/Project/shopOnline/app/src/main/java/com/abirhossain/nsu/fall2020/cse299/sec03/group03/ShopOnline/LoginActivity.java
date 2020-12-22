@@ -153,6 +153,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 }
                 else{
+                    loadingBar.dismiss();
                     Toast.makeText(LoginActivity.this, "Account with this number doesn't exist", Toast.LENGTH_SHORT).show();
                 }
             }
