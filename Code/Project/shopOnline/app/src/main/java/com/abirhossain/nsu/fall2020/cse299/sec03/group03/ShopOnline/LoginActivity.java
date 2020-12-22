@@ -130,10 +130,15 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
+                                Intent AdminLoginActivityIntent = new Intent(LoginActivity.this, AdminAddNewProduct.class);
+                                startActivity(AdminLoginActivityIntent);
+
                             }
                             else if (PhnDb.equals("Users")){
                                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
+                                Intent loginActivityIntent = new Intent(LoginActivity.this, HomeActivity.class);
+                                startActivity(loginActivityIntent);
 
                             }
 
