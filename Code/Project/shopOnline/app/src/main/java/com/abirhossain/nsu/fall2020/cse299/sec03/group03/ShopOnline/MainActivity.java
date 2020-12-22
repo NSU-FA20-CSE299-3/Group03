@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Prevalent.Prevalent;
 
 import io.paperdb.Paper;
 
@@ -38,6 +41,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(loginActivityIntent);
             }
         });
+
+        String UserPhoneKey = Paper.book().read(Prevalent.UserPhoneKey);
+        String UserPasswordKey = Paper.book().read(Prevalent.UserPasswordKey);
+
+        if(UserPhoneKey!="" && UserPasswordKey !=""){
+            if (!TextUtils.isEmpty(UserPhoneKey) && !TextUtils.isEmpty(UserPasswordKey)){
+                AllowAccess(UserPasswordKey,UserPasswordKey);
+            }
+        }
+
+    }
+
+    private void AllowAccess(String userPasswordKey, String userPasswordKey1) {
+
+
+
 
     }
 }
