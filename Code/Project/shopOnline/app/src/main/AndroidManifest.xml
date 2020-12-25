@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerce">
-        <activity android:name=".AdminAddNewProduct"></activity>
+        <activity android:name=".ProductCatagoryAdmin"></activity>
+        <activity android:name=".AdminAddNewProduct" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
