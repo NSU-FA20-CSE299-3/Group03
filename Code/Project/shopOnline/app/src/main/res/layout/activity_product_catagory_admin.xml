@@ -4,8 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductCatagoryAdmin">
+    tools:context=".ProductCatagoryAdmin"
+    android:padding="15dp"
+    android:background="#F3FDEC"
+    >
+
+    <TextView
+        android:id="@+id/cat_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="SELECT CATAGORY FOR PRODUCT"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
 
     
+
+
 
 </RelativeLayout>
