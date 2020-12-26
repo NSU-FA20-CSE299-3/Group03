@@ -33,7 +33,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","laptop");
+                intent.putExtra("category","Laptop");
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","watch");
+                intent.putExtra("category","Watch");
                 startActivity(intent);
             }
         });
@@ -49,7 +49,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","t_shirt");
+                intent.putExtra("category","Regular T-shirt");
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","st_shirt");
+                intent.putExtra("category","Sports T-shirt");
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","f_dress");
+                intent.putExtra("category","Female Dress");
                 startActivity(intent);
             }
         });
@@ -73,7 +73,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","h_phone");
+                intent.putExtra("category","Head Phone");
                 startActivity(intent);
             }
         });
@@ -81,7 +81,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","hat");
+                intent.putExtra("category","Hat");
                 startActivity(intent);
             }
         });
@@ -89,7 +89,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","glass");
+                intent.putExtra("category","Sun Glass");
                 startActivity(intent);
             }
         });
@@ -97,7 +97,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","mobile");
+                intent.putExtra("category","Smartphone");
                 startActivity(intent);
             }
         });
@@ -105,7 +105,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","purse");
+                intent.putExtra("category","Purse");
                 startActivity(intent);
             }
         });
@@ -113,7 +113,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","shoes");
+                intent.putExtra("category","Shoe");
                 startActivity(intent);
             }
         });
@@ -121,7 +121,7 @@ public class ProductCatagoryAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProductCatagoryAdmin.this,AdminAddNewProduct.class);
-                intent.putExtra("category","sweater");
+                intent.putExtra("category","Sweater");
                 startActivity(intent);
             }
         });
