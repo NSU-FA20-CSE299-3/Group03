@@ -21,8 +21,27 @@
         android:textStyle="bold"
         />
 
-    
+    <LinearLayout
+        android:id="@+id/cat_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cat_header"
+        android:orientation="horizontal"
+        >
 
+
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>
+
+
+
+
+
+
