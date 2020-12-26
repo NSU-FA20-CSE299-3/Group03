@@ -15,6 +15,6 @@ public class AdminAddNewProduct extends AppCompatActivity {
         setContentView(R.layout.activity_admin_add_new_product);
 
         selectedCategory= getIntent().getExtras().get("category").toString();
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        Toast.makeText(AdminAddNewProduct.this, selectedCategory, Toast.LENGTH_SHORT).show();
     }
 }
