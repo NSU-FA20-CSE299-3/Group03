@@ -25,8 +25,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/NewProductImg"
         android:layout_marginTop="10dp"
-        android:background="@drawable/buttons"
+        android:background="#D5DAD3"
         android:hint="ENTER PRODUCT NAME"
+        android:inputType="textMultiLine"
+        android:padding="15dp" />
+    <EditText
+        android:id="@+id/NewProductDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NewProductName"
+        android:layout_marginTop="10dp"
+        android:background="#D5DAD3"
+        android:hint="ENTER PRODUCT DESCRIPTION"
+        android:inputType="textMultiLine"
+        android:padding="15dp" />
+    <EditText
+        android:id="@+id/NewProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NewProductDesc"
+        android:layout_marginTop="10dp"
+        android:background="#D5DAD3"
+        android:hint="ENTER PRODUCT PRICE"
         android:inputType="textMultiLine"
         android:padding="15dp" />
 
