@@ -13,9 +13,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.SimpleTimeZone;
+
 public class AdminAddNewProduct extends AppCompatActivity {
 
-    private String selectedCategory, desc, name, price;
+    private String selectedCategory, desc, name, price, date, time, key;
     private EditText product_name,product_desc, product_price;
     private ImageView product_img;
     private Button addBtn;
@@ -100,6 +104,12 @@ public class AdminAddNewProduct extends AppCompatActivity {
 
     private void storeData() {
 
-        
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd,yyyy");
+        date= currentDate.format(calendar.getTime());
+        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm,ss a");
+        time= currentTime.format(calendar.getTime());
+        key = date+time;
+
     }
 }
