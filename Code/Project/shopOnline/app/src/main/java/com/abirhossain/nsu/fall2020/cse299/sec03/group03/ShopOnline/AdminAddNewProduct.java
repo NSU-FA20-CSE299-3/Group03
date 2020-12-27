@@ -19,12 +19,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.SimpleTimeZone;
 
 public class AdminAddNewProduct extends AppCompatActivity {
@@ -36,6 +39,8 @@ public class AdminAddNewProduct extends AppCompatActivity {
     private static final int PickedImage= 1;
     private Uri ImageUri;
     private StorageReference imageStorageRef;
+    private DatabaseReference productInfoRef;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
 
         selectedCategory= getIntent().getExtras().get("category").toString();
         imageStorageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
+        productInfoRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
         product_name= findViewById(R.id.NewProductName);
         product_desc= findViewById(R.id.NewProductDesc);
@@ -157,6 +163,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
                         if (task.isSuccessful()){
 
                             Toast.makeText(AdminAddNewProduct.this, "Image Url retrieved", Toast.LENGTH_SHORT).show();
+                            saveProductInfos();
 
                         }
 
@@ -167,6 +174,40 @@ public class AdminAddNewProduct extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void saveProductInfos() {
+
+        HashMap<String,Object> productMap = new HashMap<>();
+        productMap.put("id",key);
+        productMap.put("date",date);
+        productMap.put("time",time;
+        productMap.put("description",desc);
+        productMap.put("img",imgDownloaderLink);
+        productMap.put("category",selectedCategory);
+        productMap.put("price",price);
+        productMap.put("name",name);
+
+        productInfoRef.child(key).updateChildren(productMap)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(AdminAddNewProduct.this, "Product successfully added", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            String exception = task.getException().toString();
+                            Toast.makeText(AdminAddNewProduct.this, exception, Toast.LENGTH_SHORT).show();
+
+
+                        }
+
+                    }
+                });
+
+
+
 
     }
 }
