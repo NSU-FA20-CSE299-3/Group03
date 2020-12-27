@@ -1,7 +1,10 @@
 package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +18,8 @@ public class AdminAddNewProduct extends AppCompatActivity {
     private EditText product_name,product_desc, product_price;
     private ImageView product_img;
     private Button addBtn;
+    private static final int PickedImage= 1;
+    private Uri ImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +41,27 @@ public class AdminAddNewProduct extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
     private void addImage() {
 
-        
+        Intent openGallery = new Intent();
+        openGallery.setAction(Intent.ACTION_GET_CONTENT);
+        openGallery.setType("image/*");
+        startActivityForResult(openGallery,PickedImage);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==PickedImage){
+            if (resultCode==RESULT_OK){
+                if (data!=null){
+                    ImageUri = data.getData();
+                    product_img.setImageURI(ImageUri);
+                }
+            }
+        }
     }
 }
