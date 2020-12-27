@@ -171,6 +171,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Uri> task) {
 
                         if (task.isSuccessful()){
+                            imgDownloaderLink = task.getResult().toString();
 
                             Toast.makeText(AdminAddNewProduct.this, "Image Url retrieved", Toast.LENGTH_SHORT).show();
                             saveProductInfos();
@@ -204,6 +205,9 @@ public class AdminAddNewProduct extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
+                            Intent intent = new Intent(AdminAddNewProduct.this, ProductCatagoryAdmin.class);
+                            startActivity(intent);
+
                             loadingBar.dismiss();
                             Toast.makeText(AdminAddNewProduct.this, "Product successfully added", Toast.LENGTH_SHORT).show();
                         }
