@@ -3,6 +3,7 @@ package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,9 +28,21 @@ public class AdminAddNewProduct extends AppCompatActivity {
         product_img = findViewById(R.id.NewProductImg);
         addBtn = findViewById(R.id.NewProductAddBtn);
 
+        product_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addImage();
+            }
+        });
 
 
 
 
+
+    }
+
+    private void addImage() {
+
+        
     }
 }
