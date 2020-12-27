@@ -14,8 +14,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.Continuation;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -26,7 +29,7 @@ import java.util.SimpleTimeZone;
 
 public class AdminAddNewProduct extends AppCompatActivity {
 
-    private String selectedCategory, desc, name, price, date, time, key;
+    private String selectedCategory, desc, name, price, date, time, key,imgDownloaderLink;
     private EditText product_name,product_desc, product_price;
     private ImageView product_img;
     private Button addBtn;
@@ -131,8 +134,35 @@ public class AdminAddNewProduct extends AppCompatActivity {
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(AdminAddNewProduct.this, "Successfully image uploaded", Toast.LENGTH_SHORT).show();
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
+            {
+                Toast.makeText(AdminAddNewProduct.this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
+
+                Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    @Override
+                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception
+                    {
+                        if (!task.isSuccessful())
+                        {
+                            throw task.getException();
+                        }
+
+                        imgDownloaderLink = filePath.getDownloadUrl().toString();
+                        return filePath.getDownloadUrl();
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Uri> task) {
+
+                        if (task.isSuccessful()){
+
+                            Toast.makeText(AdminAddNewProduct.this, "Image Url retrieved", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                    }
+                });
+
 
 
             }
