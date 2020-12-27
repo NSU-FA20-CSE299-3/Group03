@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 
 public class AdminAddNewProduct extends AppCompatActivity {
 
-    private String selectedCategory;
+    private String selectedCategory, desc, name, price;
     private EditText product_name,product_desc, product_price;
     private ImageView product_img;
     private Button addBtn;
@@ -39,9 +40,18 @@ public class AdminAddNewProduct extends AppCompatActivity {
                 addImage();
             }
         });
+        
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                productValidation();
+            }
+        });
 
 
     }
+
+
 
     private void addImage() {
 
@@ -63,5 +73,33 @@ public class AdminAddNewProduct extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void productValidation() {
+
+        name = product_name.getText().toString();
+        desc = product_desc.getText().toString();
+        price = product_price.getText().toString();
+        if (ImageUri==null)
+        {
+            Toast.makeText(AdminAddNewProduct.this, "Image Not Selected", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(desc))
+        {
+            Toast.makeText(AdminAddNewProduct.this, "Description not given", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(price))
+        {
+            Toast.makeText(AdminAddNewProduct.this, "Price not given", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            storeData();
+        }
+
+    }
+
+    private void storeData() {
+
+        
     }
 }
