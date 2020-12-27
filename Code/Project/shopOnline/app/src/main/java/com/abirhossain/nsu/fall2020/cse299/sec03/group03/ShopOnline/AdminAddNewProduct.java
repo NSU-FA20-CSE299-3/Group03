@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,11 +37,12 @@ public class AdminAddNewProduct extends AppCompatActivity {
     private EditText product_name,product_desc, product_price;
     private ImageView product_img;
     private Button addBtn;
+    private ProgressDialog loadingBar;
     private static final int PickedImage= 1;
     private Uri ImageUri;
     private StorageReference imageStorageRef;
     private DatabaseReference productInfoRef;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
         selectedCategory= getIntent().getExtras().get("category").toString();
         imageStorageRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         productInfoRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        loadingBar = new ProgressDialog(this);
 
         product_name= findViewById(R.id.NewProductName);
         product_desc= findViewById(R.id.NewProductDesc);
@@ -123,6 +126,11 @@ public class AdminAddNewProduct extends AppCompatActivity {
 
     private void storeData() {
 
+        loadingBar.setTitle("Adding New Product");
+        loadingBar.setMessage("Please Wait,while we check the informations");
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show();
+
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd,yyyy");
         date= currentDate.format(calendar.getTime());
@@ -135,8 +143,10 @@ public class AdminAddNewProduct extends AppCompatActivity {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+
                 String errorMsg = e.toString();
                 Toast.makeText(AdminAddNewProduct.this, errorMsg, Toast.LENGTH_SHORT).show();
+                loadingBar.dismiss();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
@@ -182,7 +192,7 @@ public class AdminAddNewProduct extends AppCompatActivity {
         HashMap<String,Object> productMap = new HashMap<>();
         productMap.put("id",key);
         productMap.put("date",date);
-        productMap.put("time",time;
+        productMap.put("time",time);
         productMap.put("description",desc);
         productMap.put("img",imgDownloaderLink);
         productMap.put("category",selectedCategory);
@@ -194,9 +204,11 @@ public class AdminAddNewProduct extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
+                            loadingBar.dismiss();
                             Toast.makeText(AdminAddNewProduct.this, "Product successfully added", Toast.LENGTH_SHORT).show();
                         }
                         else {
+                            loadingBar.dismiss();
                             String exception = task.getException().toString();
                             Toast.makeText(AdminAddNewProduct.this, exception, Toast.LENGTH_SHORT).show();
 
