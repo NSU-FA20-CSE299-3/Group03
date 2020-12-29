@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline">
+    package="com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline" >
 
     <application
         android:allowBackup="true"
@@ -8,16 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ECommerce">
+        android:theme="@style/Theme.ECommerce" >
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.ECommerce.NoActionBar"></activity>
+            android:theme="@style/Theme.ECommerce.NoActionBar" >
+        </activity>
         <activity android:name=".ProductCatagoryAdmin" />
         <activity android:name=".AdminAddNewProduct" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
