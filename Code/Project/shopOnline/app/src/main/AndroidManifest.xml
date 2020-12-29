@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/Theme.ECommerce" >
         <activity
             android:name=".HomeActivity"
@@ -15,7 +16,12 @@
             android:theme="@style/Theme.ECommerce.NoActionBar" >
         </activity>
         <activity android:name=".ProductCatagoryAdmin" />
+=======
+        android:theme="@style/Theme.ECommerce">
+        <activity android:name=".ProductCatagoryAdmin"></activity>
+>>>>>>> parent of aa9ce6c... Enhancement #17 : New activity created
         <activity android:name=".AdminAddNewProduct" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity" >
