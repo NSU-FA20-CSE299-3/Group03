@@ -20,9 +20,13 @@ public class productViewHolder extends RecyclerView.ViewHolder implements View.O
         ShowProductImage= itemView.findViewById(R.id.product_image_display);
         ShowProductName = itemView.findViewById(R.id.product_name_display);
         ShowProductDesc= itemView.findViewById(R.id.product_desc_display);
-        
+
 
     }
+
+    
+
+
 
     @Override
     public void onClick(View v) {
