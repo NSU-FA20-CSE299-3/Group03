@@ -11,13 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Interfaces.ItemClickListener;
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.R;
 
-public class productViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     public TextView ShowProductName,ShowProductDesc,ShowProductPrice;
     public ImageView ShowProductImage;
     public ItemClickListener itemListener;
 
-    public productViewHolder(@NonNull View itemView) {
+    public ProductViewHolder(@NonNull View itemView) {
         super(itemView);
         ShowProductImage= itemView.findViewById(R.id.product_image_display);
         ShowProductName = itemView.findViewById(R.id.product_name_display);

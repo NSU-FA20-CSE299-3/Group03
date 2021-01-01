@@ -64,6 +64,10 @@ public class HomeActivity extends AppCompatActivity {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                         finish();
+                    case R.id.nav_products:
+                        Intent intent1 = new Intent(HomeActivity.this,ShowProduct.class);
+                        startActivity(intent1);
+
 
                 }
 
