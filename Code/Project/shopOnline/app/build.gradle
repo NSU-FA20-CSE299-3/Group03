@@ -45,6 +45,9 @@ dependencies {
     //firebase recyclerView Adapter
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
 
+    //picasso implementation
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 
     //circle image dependency
     implementation 'de.hdodenhof:circleimageview:3.1.0'
