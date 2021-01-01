@@ -32,6 +32,20 @@
             android:layout_marginTop="5dp"
             />
         <TextView
+            android:id="@+id/product_price_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            style="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/product_image_display"
+
+            />
+
+        <TextView
             android:id="@+id/product_desc_display"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,7 +55,7 @@
             style="bold"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/product_image_display"
+            android:layout_below="@+id/product_price_display"
 
             />
 
