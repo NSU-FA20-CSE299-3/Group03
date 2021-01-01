@@ -8,12 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Interfaces.ItemClickListener;
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.R;
 
 public class productViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     public TextView ShowProductName,ShowProductDesc;
     public ImageView ShowProductImage;
+    public ItemClickListener itemListener;
 
     public productViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -24,12 +26,17 @@ public class productViewHolder extends RecyclerView.ViewHolder implements View.O
 
     }
 
-    
+    public void setItemClickListener(ItemClickListener listener){
+
+        this.itemListener = listener;
+    }
 
 
 
     @Override
     public void onClick(View v) {
+
+        itemListener.onClick(v, getAdapterPosition(),false);
 
     }
 }
