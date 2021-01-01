@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SIGN UP"
-
         android:gravity="center"
         android:textColor="#DFD2D2"
         android:textSize="40sp"

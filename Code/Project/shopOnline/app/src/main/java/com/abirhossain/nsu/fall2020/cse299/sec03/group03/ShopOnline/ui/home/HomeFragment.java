@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.R;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 
 public class HomeFragment extends Fragment {
 
@@ -31,5 +32,11 @@ public class HomeFragment extends Fragment {
             }
         });
         return root;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter
     }
 }
