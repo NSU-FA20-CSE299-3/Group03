@@ -4,13 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowProduct">
+    tools:context=".ShowProduct"
+    android:padding="15dp"
+    >
+    <TextView
+        android:id="@+id/product_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Products"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="15dp"
+        />
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/recycler_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
+        android:layout_below="@+id/product_header"
         >
 
     </androidx.recyclerview.widget.RecyclerView>
