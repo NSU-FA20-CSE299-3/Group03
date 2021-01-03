@@ -21,7 +21,7 @@ public class HomeViewModel extends ViewModel  {
 
     public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("Go to Product page");
+        mText.setValue("FROM NAV-BAR PLEASE SELECT PRODUCTS OPTION TO SEE AVAILABLE PRODUCTS");
 
     }
 
