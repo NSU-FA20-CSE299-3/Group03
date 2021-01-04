@@ -16,7 +16,7 @@
         android:id="@+id/details_price_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="20sp"
         style="bold"
         android:textColor="@color/black"
@@ -28,7 +28,7 @@
         android:id="@+id/details_desc_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:gravity="center"
         android:textSize="20sp"
         style="bold"
         android:textColor="@color/black"
@@ -36,6 +36,23 @@
         android:layout_below="@+id/details_price_display"
         android:text="Description: "
         />
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/elegant_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_desc_display"
+        android:elevation="6dp"
+        app:textSize="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        app:backGroundColor="@color/black"
+        app:textColor="@color/white"
+        app:initialNumber="1"
+        app:finalNumber="5"
+
+        />
+
+
 
 
 </RelativeLayout>
