@@ -47,8 +47,8 @@ dependencies {
 
     //picasso implementation
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-
+    // Elegant Button
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
     //circle image dependency
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
