@@ -15,12 +15,14 @@ public class OrderDetailsActivity extends AppCompatActivity {
     private ImageView productImage;
     private ElegantNumberButton BtnNumber;
     private TextView pPrice, pDesc, pName;
+    private String pId = "";
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pId = getIntent().getStringExtra("id");
         setContentView(R.layout.activity_order_details);
         productImage = findViewById(R.id.details_image);
         BtnNumber = findViewById(R.id.elegant_button);
