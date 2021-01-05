@@ -1,14 +1,23 @@
 package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ModelClasses.Products;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class OrderDetailsActivity extends AppCompatActivity {
     private FloatingActionButton BtnAddToCart;
@@ -16,6 +25,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
     private ElegantNumberButton BtnNumber;
     private TextView pPrice, pDesc, pName;
     private String pId = "";
+    private ImageView backBtn;
 
 
 
@@ -29,7 +39,38 @@ public class OrderDetailsActivity extends AppCompatActivity {
         pPrice = findViewById(R.id.details_Price_display);
         pDesc = findViewById(R.id.details_desc_display);
         pName = findViewById(R.id.details_Name_display);
+        backBtn = findViewById(R.id.backBtnDetails);
+        productDetails(pId);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         
+    }
+
+    private void productDetails(String pId) {
+        DatabaseReference productRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        productRef.child(pId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    Products products = snapshot.getValue(Products.class);
+                    pName.setText(products.getName());
+                    pDesc.setText(products.getDescription());
+                    pPrice.setText(products.getPrice());
+                    Picasso.get().load(products.getImg()).into(productImage);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
 }
