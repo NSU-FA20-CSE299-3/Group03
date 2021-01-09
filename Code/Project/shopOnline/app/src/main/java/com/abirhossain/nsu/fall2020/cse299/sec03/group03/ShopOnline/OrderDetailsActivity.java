@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,12 +21,13 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 public class OrderDetailsActivity extends AppCompatActivity {
-    private FloatingActionButton BtnAddToCart;
+
     private ImageView productImage;
     private ElegantNumberButton BtnNumber;
     private TextView pPrice, pDesc, pName;
     private String pId = "";
     private ImageView backBtn;
+    private Button addToCartBtn;
 
 
 
@@ -40,6 +42,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         pDesc = findViewById(R.id.details_desc_display);
         pName = findViewById(R.id.details_Name_display);
         backBtn = findViewById(R.id.backBtnDetails);
+        addToCartBtn = findViewById(R.id.addToCartButton);
         productDetails(pId);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
