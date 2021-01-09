@@ -78,16 +78,7 @@
         app:finalNumber="5"
 
         />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_to_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="10dp"
-        android:backgroundTint="#BFBFBF"
-        android:src="@drawable/ic_baseline_shopping_cart_24"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        />
+
 
 
 
