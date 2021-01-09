@@ -79,6 +79,17 @@
 
         />
 
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/elegant_button"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/black"
+        android:text="Add To Cart"
+        android:textColor="@color/white"
+        />
+
 
 
 
