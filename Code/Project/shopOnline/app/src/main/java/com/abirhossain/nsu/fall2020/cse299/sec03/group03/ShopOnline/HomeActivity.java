@@ -68,6 +68,11 @@ public class HomeActivity extends AppCompatActivity {
                         Intent intent1 = new Intent(HomeActivity.this,ShowProduct.class);
                         startActivity(intent1);
                         break;
+                    case R.id.nav_cart:
+                        Intent intent2 = new Intent(HomeActivity.this,CartListActivity.class);
+                        startActivity(intent2);
+                        break;
+
 
 
                 }
