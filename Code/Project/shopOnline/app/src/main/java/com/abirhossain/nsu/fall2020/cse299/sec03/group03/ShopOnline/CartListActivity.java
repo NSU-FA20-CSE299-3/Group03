@@ -8,6 +8,12 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ModelClasses.cartList;
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Prevalent.Prevalent;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class CartListActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -28,4 +34,14 @@ public class CartListActivity extends AppCompatActivity {
         prcdToOrderBtn = findViewById(R.id.orderNowBtn);
         totalPrice = findViewById(R.id.totalItemPrice);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        FirebaseRecyclerOptions<cartList> options =
+                new FirebaseRecyclerOptions.Builder<cartList>()
+                .setQuery(cartListRef.child("User View").child(Prevalent.onlineUsers.getPhone()).child("Products"),cartList.class).build();
+     }
 }
