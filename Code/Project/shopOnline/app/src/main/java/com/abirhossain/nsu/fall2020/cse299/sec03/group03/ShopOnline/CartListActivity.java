@@ -45,10 +45,10 @@ public class CartListActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart");
         FirebaseRecyclerOptions<cartList> options =
                 new FirebaseRecyclerOptions.Builder<cartList>()
-                .setQuery(cartListRef.child("User View").child(Prevalent.onlineUsers.getPhone()).child("Products"),cartList.class).build();
+                .setQuery(cartListRef.child("User view").child(Prevalent.onlineUsers.getPhone()).child("Products"),cartList.class).build();
         FirebaseRecyclerAdapter<cartList, cartViewHolder> adapter = new FirebaseRecyclerAdapter<cartList, cartViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull cartViewHolder holder, int position, @NonNull cartList model) {
@@ -66,5 +66,7 @@ public class CartListActivity extends AppCompatActivity {
                 return  holder;
             }
         };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
      }
 }
