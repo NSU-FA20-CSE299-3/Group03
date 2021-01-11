@@ -52,8 +52,8 @@ public class CartListActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<cartList, cartViewHolder> adapter = new FirebaseRecyclerAdapter<cartList, cartViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull cartViewHolder holder, int position, @NonNull cartList model) {
-                holder.itemQuantityTV.setText(model.getQuantity());
-                holder.itemPriceTV.setText(model.getPrice());
+                holder.itemQuantityTV.setText(model.getQuantity()+" pcs");
+                holder.itemPriceTV.setText(model.getPrice()+"X"+model.getQuantity());
                 holder.itemNameTV.setText(model.getpName());
 
             }
