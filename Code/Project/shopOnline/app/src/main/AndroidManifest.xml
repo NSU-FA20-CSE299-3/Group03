@@ -10,10 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerce"
-        tools:replace="android:theme"
-        >
-
-        <activity android:name=".OrderDetailsActivity"></activity>
+        tools:replace="android:theme">
+        <activity android:name=".CartListActivity"></activity>
+        <activity android:name=".OrderDetailsActivity" />
         <activity android:name=".ShowProduct" />
         <activity
             android:name=".HomeActivity"
