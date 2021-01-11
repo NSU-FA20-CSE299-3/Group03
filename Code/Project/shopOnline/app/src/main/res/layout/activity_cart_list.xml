@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartListActivity">
+    tools:context=".CartListActivity"
+    android:padding="10dp"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/CartListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cart List"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="45sp"
+        android:layout_marginBottom="10dp"
+        >
+
+    </TextView>
+    <RelativeLayout
+        android:id="@+id/Total_price"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/black"
+
+        android:layout_below="@+id/CartListHeader"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price : "
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            >
+        </TextView>
+
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Total_price"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/orderNowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/black"
+        android:padding="15dp"
+        android:text="Proceed to order"
+        android:textColor="@color/white"
+        >
+
+    </Button>
+
+</RelativeLayout>
