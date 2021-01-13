@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ECommerce"
         tools:replace="android:theme">
-        <activity android:name=".CartListActivity"></activity>
+        <activity android:name=".CheckoutActivity"></activity>
+        <activity android:name=".CartListActivity" />
         <activity android:name=".OrderDetailsActivity" />
         <activity android:name=".ShowProduct" />
         <activity
