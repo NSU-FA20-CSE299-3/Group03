@@ -14,12 +14,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ModelClasses.cartList;
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Prevalent.Prevalent;
 import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.ViewHolder.cartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -76,6 +80,26 @@ public class CartListActivity extends AppCompatActivity {
                                    Intent intent = new Intent(CartListActivity.this,OrderDetailsActivity.class);
                                    intent.putExtra("pid",model.getPid());
                                    startActivity(intent);
+                                }
+                                if (which == 1){
+                                    cartListRef.child("User view")
+                                            .child(Prevalent.onlineUsers.getPhone())
+                                            .child("Products")
+                                            .child(model.getPid())
+                                            .removeValue()
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()){
+                                                        Toast.makeText(CartListActivity.this, "Product removed from cart", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(CartListActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
 
                                 }
                             }
