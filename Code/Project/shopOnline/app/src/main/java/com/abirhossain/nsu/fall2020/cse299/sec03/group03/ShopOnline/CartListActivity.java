@@ -33,6 +33,7 @@ public class CartListActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private Button prcdToOrderBtn;
     private TextView totalPrice;
+    private int TotalPrice = 0;
 
 
 
@@ -46,6 +47,14 @@ public class CartListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         prcdToOrderBtn = findViewById(R.id.orderNowBtn);
         totalPrice = findViewById(R.id.totalItemPrice);
+
+        totalPrice.setText(String.valueOf(TotalPrice));
+        prcdToOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -62,6 +71,9 @@ public class CartListActivity extends AppCompatActivity {
                 holder.itemQuantityTV.setText(model.getQuantity()+" pcs");
                 holder.itemPriceTV.setText(model.getPrice()+"X"+model.getQuantity());
                 holder.itemNameTV.setText(model.getpName());
+
+                int singleProductPrice = Integer.valueOf(model.getPrice()) * Integer.valueOf(model.getQuantity());
+                TotalPrice = TotalPrice + singleProductPrice;
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
