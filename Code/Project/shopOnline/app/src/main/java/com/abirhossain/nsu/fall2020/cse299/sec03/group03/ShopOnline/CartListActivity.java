@@ -74,14 +74,14 @@ public class CartListActivity extends AppCompatActivity {
                         builder.setTitle("Select an option: ");
                         builder.setItems(options, new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialog, int which) {
+                            public void onClick(DialogInterface dialog, int i) {
 
-                                if (which==0){
+                                if (i==0){
                                    Intent intent = new Intent(CartListActivity.this,OrderDetailsActivity.class);
                                    intent.putExtra("pid",model.getPid());
                                    startActivity(intent);
                                 }
-                                if (which == 1){
+                                if (i == 1){
                                     cartListRef.child("User view")
                                             .child(Prevalent.onlineUsers.getPhone())
                                             .child("Products")

@@ -77,7 +77,6 @@ public class OrderDetailsActivity extends AppCompatActivity {
         Calendar callDate = Calendar.getInstance();
         SimpleDateFormat getDate = new SimpleDateFormat("MMM DD,yyyy");
         saveCurrentDate = getDate.format(callDate.getTime());
-
         SimpleDateFormat getTime = new SimpleDateFormat("HH:mm:ss a");
         currentTime = getDate.format(callDate.getTime());
 
