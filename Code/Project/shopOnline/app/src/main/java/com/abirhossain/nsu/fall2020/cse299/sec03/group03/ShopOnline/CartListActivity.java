@@ -1,10 +1,13 @@
 package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +58,30 @@ public class CartListActivity extends AppCompatActivity {
                 holder.itemQuantityTV.setText(model.getQuantity()+" pcs");
                 holder.itemPriceTV.setText(model.getPrice()+"X"+model.getQuantity());
                 holder.itemNameTV.setText(model.getpName());
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        CharSequence options[] = new CharSequence[]{
+                          "Edit",
+                          "Delete"
+                        };
+                        AlertDialog.Builder builder = new AlertDialog.Builder(CartListActivity.this);
+                        builder.setTitle("Select an option: ");
+                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                if (which==0){
+                                   Intent intent = new Intent(CartListActivity.this,OrderDetailsActivity.class);
+                                   intent.putExtra("pid",model.getPid());
+                                   startActivity(intent);
+
+                                }
+                            }
+                        });
+                    }
+                });
 
             }
 

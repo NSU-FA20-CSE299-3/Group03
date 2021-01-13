@@ -70,8 +70,7 @@ public class ShowProduct extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         });
-
-
+                        
                     }
 
                     @NonNull
