@@ -101,11 +101,12 @@ public class CartListActivity extends AppCompatActivity {
                                         public void onFailure(@NonNull Exception e) {
                                             Toast.makeText(CartListActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                                         }
-                                    })
+                                    });
 
                                 }
                             }
                         });
+                        builder.show();
                     }
                 });
 
