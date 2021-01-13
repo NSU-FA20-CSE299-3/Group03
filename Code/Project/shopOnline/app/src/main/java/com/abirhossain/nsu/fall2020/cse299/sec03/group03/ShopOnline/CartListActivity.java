@@ -92,6 +92,8 @@ public class CartListActivity extends AppCompatActivity {
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()){
                                                         Toast.makeText(CartListActivity.this, "Product removed from cart", Toast.LENGTH_SHORT).show();
+                                                        Intent intent = new Intent(CartListActivity.this,ShowProduct.class);
+                                                        startActivity(intent);
                                                     }
                                                 }
                                             }).addOnFailureListener(new OnFailureListener() {
