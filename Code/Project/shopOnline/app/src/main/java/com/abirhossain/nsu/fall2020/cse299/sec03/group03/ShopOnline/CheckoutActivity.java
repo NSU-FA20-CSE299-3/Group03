@@ -10,6 +10,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
     private EditText coName,coPhone,coAddress,coCity;
     private Button placeOrderBtn;
+    private String TotalOrderPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class CheckoutActivity extends AppCompatActivity {
         coAddress = findViewById(R.id.coAddress);
         coCity = findViewById(R.id.coCity);
         placeOrderBtn = findViewById(R.id.placeOrderBtn);
+       TotalOrderPrice = getIntent().getStringExtra("Total Price");
 
     }
 }

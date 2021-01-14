@@ -48,10 +48,14 @@ public class CartListActivity extends AppCompatActivity {
         prcdToOrderBtn = findViewById(R.id.orderNowBtn);
         totalPrice = findViewById(R.id.totalItemPrice);
 
-        totalPrice.setText(String.valueOf(TotalPrice));
+
         prcdToOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(CartListActivity.this,CheckoutActivity.class);
+                intent.putExtra("Total Price",String.valueOf(TotalPrice));
+                startActivity(intent);
+                finish();
 
             }
         });
@@ -64,7 +68,7 @@ public class CartListActivity extends AppCompatActivity {
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart");
         FirebaseRecyclerOptions<cartList> options =
                 new FirebaseRecyclerOptions.Builder<cartList>()
-                .setQuery(cartListRef.child("User view").child(Prevalent.onlineUsers.getPhone()).child("Products"),cartList.class).build();
+                        .setQuery(cartListRef.child("User view").child(Prevalent.onlineUsers.getPhone()).child("Products"),cartList.class).build();
         FirebaseRecyclerAdapter<cartList, cartViewHolder> adapter = new FirebaseRecyclerAdapter<cartList, cartViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull cartViewHolder holder, int position, @NonNull cartList model) {
@@ -72,15 +76,16 @@ public class CartListActivity extends AppCompatActivity {
                 holder.itemPriceTV.setText(model.getPrice()+"X"+model.getQuantity());
                 holder.itemNameTV.setText(model.getpName());
 
-                int singleProductPrice = Integer.valueOf(model.getPrice()) * Integer.valueOf(model.getQuantity());
+                int singleProductPrice = ((Integer.valueOf(model.getPrice())) * Integer.valueOf(model.getQuantity()));
                 TotalPrice = TotalPrice + singleProductPrice;
+                totalPrice.setText(String.valueOf("Total Price: "+TotalPrice+"$"));
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         CharSequence options[] = new CharSequence[]{
-                          "Edit",
-                          "Delete"
+                                //"Edit",
+                                "Delete"
                         };
                         AlertDialog.Builder builder = new AlertDialog.Builder(CartListActivity.this);
                         builder.setTitle("Select an option: ");
@@ -88,12 +93,12 @@ public class CartListActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
 
-                                if (i==0){
-                                   Intent intent = new Intent(CartListActivity.this,OrderDetailsActivity.class);
-                                   intent.putExtra("pid",model.getPid());
-                                   startActivity(intent);
-                                }
-                                if (i == 1){
+                              /*  if (i==0){
+                                    Intent intent = new Intent(CartListActivity.this,OrderDetailsActivity.class);
+                                    intent.putExtra("pid",model.getPid());
+                                    startActivity(intent);
+                                }*/
+                                if (i == 0){
                                     cartListRef.child("User view")
                                             .child(Prevalent.onlineUsers.getPhone())
                                             .child("Products")
@@ -134,5 +139,5 @@ public class CartListActivity extends AppCompatActivity {
         };
         recyclerView.setAdapter(adapter);
         adapter.startListening();
-     }
+    }
 }
