@@ -3,8 +3,11 @@ package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -21,7 +24,39 @@ public class CheckoutActivity extends AppCompatActivity {
         coAddress = findViewById(R.id.coAddress);
         coCity = findViewById(R.id.coCity);
         placeOrderBtn = findViewById(R.id.placeOrderBtn);
-       TotalOrderPrice = getIntent().getStringExtra("Total Price");
+        TotalOrderPrice = getIntent().getStringExtra("Total Price");
 
+       placeOrderBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               checkDetails();
+           }
+       });
+    }
+
+    private void checkDetails() {
+        if (TextUtils.isEmpty(coName.getText().toString())){
+            Toast.makeText(CheckoutActivity.this, "Empty field", Toast.LENGTH_SHORT).show();
+
+        }
+        else if (TextUtils.isEmpty(coPhone.getText().toString())){
+            Toast.makeText(CheckoutActivity.this, "Empty field", Toast.LENGTH_SHORT).show();
+
+        }
+        else if(TextUtils.isEmpty(coAddress.getText().toString())){
+            Toast.makeText(CheckoutActivity.this, "Empty field", Toast.LENGTH_SHORT).show();
+
+        }
+        else if (TextUtils.isEmpty(coCity.getText().toString())){
+            Toast.makeText(CheckoutActivity.this, "Empty field", Toast.LENGTH_SHORT).show();
+
+        }
+        else {
+            placeOrder();
+        }
+
+    }
+
+    private void placeOrder() {
     }
 }

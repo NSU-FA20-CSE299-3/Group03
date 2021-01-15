@@ -119,6 +119,7 @@ public class CartListActivity extends AppCompatActivity {
                                             Toast.makeText(CartListActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
                                         }
                                     });
+                                    
 
                                 }
                             }
