@@ -39,7 +39,8 @@ public class ShowProduct extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(ShowProduct.this,HomeActivity.class);
+                startActivity(intent);
             }
         });
 
