@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class CheckoutActivity extends AppCompatActivity {
 
     private EditText coName,coPhone,coAddress,coCity;
@@ -58,5 +61,11 @@ public class CheckoutActivity extends AppCompatActivity {
     }
 
     private void placeOrder() {
+        final String currentTime,saveCurrentDate;
+        Calendar callDate = Calendar.getInstance();
+        SimpleDateFormat getDate = new SimpleDateFormat("MMM DD,yyyy");
+        saveCurrentDate = getDate.format(callDate.getTime());
+        SimpleDateFormat getTime = new SimpleDateFormat("HH:mm:ss a");
+        currentTime = getDate.format(callDate.getTime());
     }
 }

@@ -73,7 +73,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
     }
 
     private void addToCart() {
-        String currentTime,saveCurrentDate;
+        final String currentTime,saveCurrentDate;
         Calendar callDate = Calendar.getInstance();
         SimpleDateFormat getDate = new SimpleDateFormat("MMM DD,yyyy");
         saveCurrentDate = getDate.format(callDate.getTime());
