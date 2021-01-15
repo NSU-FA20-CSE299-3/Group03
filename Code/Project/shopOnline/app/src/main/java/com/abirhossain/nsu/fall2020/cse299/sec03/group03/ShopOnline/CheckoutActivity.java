@@ -88,5 +88,28 @@ public class CheckoutActivity extends AppCompatActivity {
         placeOrderMap.put("time",currentTime);
         placeOrderMap.put("state","Not Delivered");
 
+        placeOrderRef.updateChildren(placeOrderMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    FirebaseDatabase.getInstance().getReference().child("Cart")
+                            .child("User view")
+                            .child(Prevalent.onlineUsers.getPhone()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(CheckoutActivity.this, "Order Placed Successfully", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(CheckoutActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
+
+
+
     }
 }
