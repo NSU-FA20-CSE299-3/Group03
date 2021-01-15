@@ -1,5 +1,6 @@
 package com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -9,8 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.abirhossain.nsu.fall2020.cse299.sec03.group03.ShopOnline.Prevalent.Prevalent;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -67,5 +76,17 @@ public class CheckoutActivity extends AppCompatActivity {
         saveCurrentDate = getDate.format(callDate.getTime());
         SimpleDateFormat getTime = new SimpleDateFormat("HH:mm:ss a");
         currentTime = getDate.format(callDate.getTime());
+
+        final DatabaseReference placeOrderRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.onlineUsers.getPhone());
+        HashMap<String,Object> placeOrderMap = new HashMap<>();
+        placeOrderMap.put("TotalOrderPrice",TotalOrderPrice);
+        placeOrderMap.put("User Name",coName.getText().toString());
+        placeOrderMap.put("User Phone",coPhone.getText().toString());
+        placeOrderMap.put("User Address",coAddress.getText().toString());
+        placeOrderMap.put("User City",coCity.getText().toString());
+        placeOrderMap.put("date",saveCurrentDate);
+        placeOrderMap.put("time",currentTime);
+        placeOrderMap.put("state","Not Delivered");
+
     }
 }
