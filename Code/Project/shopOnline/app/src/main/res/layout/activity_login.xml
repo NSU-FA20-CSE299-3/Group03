@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/EnterNonAdminPanel"
         android:layout_marginTop="10dp"
-        android:text="I Am An Admin"
+        android:text="I Am Client"
         android:layout_alignParentStart="true"
         android:layout_below="@id/Login_Page_login"
         android:textColor="@color/white"
