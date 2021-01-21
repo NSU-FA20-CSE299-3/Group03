@@ -133,14 +133,14 @@ Clients can place order by provoding necessary informations <br>
  <img width="230" height="420" src="Mockup/ui11.PNG"><br>
 </p>
 
- <h2 id="#Technology">3.Technology</h2>
+ <h2 id="Technology">3.Technology</h2>
 
  <p>For this app i used android studio as the IDE. I used java to handel item clicks and other views.Relative layout, linearlayout, recyclerview, and other android widgets were used. To design i used XML code</p>
  <p>For Data management i have used firebase.No design pattern was followed for making this app. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.Firebase database is a noSql database and it stores data in tree format. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale.</p>
 
 
 
-<h2 id="#Monetization">4. Monetization</h2>
+<h2 id="Monetization">4. Monetization</h2>
 <p>
 The user will not pay any subscription fee to use this that means they will be able to use
 it for free but I integrated google AdMob in this app. AdMob helps translate one’s hard
@@ -148,11 +148,11 @@ work into earnings, Google AdMob makes it easy for developers to earn money from
 app. That’s how the cost for developing this application will reimburse.
 </p>
 
-<h2>5. Roadblocks</h2>
-<p id="#Roadblocks">
+<h2 id="Roadblocks">5. Roadblocks</h2>
+<p>
 There are some roadblocks i had to face while making this app. I faced most of the problem with navigation drawer. Android navigation drawer got updated and now the navigation drawer comes with fragmanents. I tried to implement recyclerView in fragment but could not do it. So i created a new activity to show products. While designing I also faced problem with elegent button library. But from manifest I was able to fix that problem. I cart activity my edit button is not working properly but delete button is working fine. In firebase i also faced some problem. At first while connecting firebase to my app i tried the old method which is copyiing the ssh1 code from my app and the paste it on firebase. Then the firebase was getting connected but the realtime database was not working though i added dependency in build.gradle(app). Then i created another new project and connected firebase from tools then it was working fine.Later on after a month i again faced another problem with realtime database because i opened the app in Test Mode which is an insecure mode where users get permission to read and write in the database. But google only allows this mode for one month. And was not allowing the users to login to the app or signup. Then i changed the realtime database rule manually and it started working just fine.And justification in readme.md wasn't possible when writing report or keeping the initial project proposal in markdown format. But in html format it works just fine. </p>
-<h2>6. Conclusion</h2>
-<p id="#conclusion">
+<h2  id="conclusion">6. Conclusion</h2>
+<p>
 A huge number of people uses android phone in our country and over the world. So an
 E-commerce android application will be able to target a large group of people. And a lot
 of people will be able to get service from this app.This app will have significant economic effect like reducing the transaction cost, it will
