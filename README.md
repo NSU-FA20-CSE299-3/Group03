@@ -16,7 +16,7 @@
   Group:03</br>
   Semester: Fall 2020</br><br>
   Faculty Name: Shaikh Shawon Arefin Shimon</h2>
-  <h3 align="center">Student Name: Md Abir Hossain<br>
+  <h3 align="center">Student Name: Md. Abir Hossain<br>
 
   Student ID: 1731597042<br>
   Email: abir.hossain04@northsouth.edu <br><br>
@@ -120,21 +120,24 @@ This project has the following features -
 <h3>2.6 Add to cart:</h3>
  Clients can click those products and see the details of those and also add them to cart<br>
  <p align="center">
-<img width="200" height="420" src="Mockup/ui9.PNG.PNG"><br>
+<img width="200" height="420" src="Mockup/ui9.PNG"><br>
 </p>
 <h3>2.7 Cart Items:</h3>
 Clients can see cart items and total price. They can also delete item from cart <br>
 <p align="center">
- <img width="200" height="420" src="Mockup/ui10.PNG.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui10.PNG"><br>
 </p>
 <h3>2.9 Place Order:</h3>
 Clients can place order by provoding necessary informations <br>
 <p align="center">
- <img width="200" height="420" src="Mockup/ui11.PNG.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui11.PNG"><br>
 </p>
 
- <h2 id="#data">3.Data Management</h2>
- <p>For Data management i have used both firebase and sqlite. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale. Sqlite was used to store the cart items that user was storing in his app </p>
+ <h2 id="#Technology">3.Technology</h2>
+
+ <p>For this app i used android studio as the IDE. I used java to handel item clicks and other views.Relative layout, linearlayout, recyclerview, and other android widgets were used. To design i used XML code</p><br>
+
+ <p>For Data management i have used both firebase. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale.</p>
 
 
 
