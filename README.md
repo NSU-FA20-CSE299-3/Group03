@@ -61,14 +61,14 @@ This project has the following features -
    <br>
    <br>
  <p align="center">
-  <img width="200" height="420" src="Mockup/ui1.PNG"><br>
+  <img width="230" height="420" src="Mockup/ui1.PNG"><br>
  </p>
  <h3>2.2 Choose Option:</h3>
   Then users will get option to login or signup
    <br>
    <br>
  <p align="center">
-  <img width="200" height="420" src="Mockup/ui2.PNG"><br>
+  <img width="230" height="420" src="Mockup/ui2.PNG"><br>
  </p>
 
 <h3>2.3 User Registration:</h3>
@@ -76,19 +76,19 @@ This project has the following features -
    <br>
    <br>
  <p align="center">
-  <img width="200" height="420" src="Mockup/reg.PNG"><br>
+  <img width="230" height="420" src="Mockup/reg.PNG"><br>
  </p>
  <h3>2.4 User Login:</h3>
   User can login by providing phone number and passsword
    <br>
    <br>
  <p align="center">
-  <img width="200" height="420" src="Mockup/ui3.PNG"><br>
+  <img width="230" height="420" src="Mockup/ui3.PNG"><br>
  </p>
  
  If the user is an Admin then after login he/she will see categories to add product 
   <p align="center">
-  <img width="200" height="420" src="Mockup/ui4.PNG"><br>
+  <img width="230" height="420" src="Mockup/ui4.PNG"><br>
  </p>
 
   Then admins will give necessery information and add product<br>
@@ -96,7 +96,7 @@ This project has the following features -
 
 
   <p align="center">
- <img width="200" height="420" src="Mockup/ui5.PNG"><br>
+ <img width="230" height="420" src="Mockup/ui5.PNG"><br>
 
 </p>
 <h3>2.5 Client Navbar:</h3>
@@ -104,7 +104,7 @@ This project has the following features -
   <br>
 
   <p align="center">
- <img width="200" height="420" src="Mockup/ui7.PNG"><br>
+ <img width="230" height="420" src="Mockup/ui7.PNG"><br>
 
 </p>
 <h3>2.5 See products:</h3>
@@ -112,7 +112,7 @@ This project has the following features -
   <br>
 
   <p align="center">
- <img width="200" height="420" src="Mockup/ui8.PNG"><br>
+ <img width="230" height="420" src="Mockup/ui8.PNG"><br>
 
 </p>
 
@@ -120,17 +120,17 @@ This project has the following features -
 <h3>2.6 Add to cart:</h3>
  Clients can click those products and see the details of those and also add them to cart<br>
  <p align="center">
-<img width="200" height="420" src="Mockup/ui9.PNG"><br>
+<img width="230" height="420" src="Mockup/ui9.PNG"><br>
 </p>
 <h3>2.7 Cart Items:</h3>
 Clients can see cart items and total price. They can also delete item from cart <br>
 <p align="center">
- <img width="200" height="420" src="Mockup/ui10.PNG"><br>
+ <img width="230" height="420" src="Mockup/ui10.PNG"><br>
 </p>
 <h3>2.9 Place Order:</h3>
 Clients can place order by provoding necessary informations <br>
 <p align="center">
- <img width="200" height="420" src="Mockup/ui11.PNG"><br>
+ <img width="230" height="420" src="Mockup/ui11.PNG"><br>
 </p>
 
  <h2 id="#Technology">3.Technology</h2>
