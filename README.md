@@ -38,7 +38,7 @@
   <a href="#introduction"><li>Introduction</li><br></a>
   <a href="#features"><li>Features</li><br></a>
   <a href="#Technology"><li>Technology</li><br></a>
-  <a href="#Design"><li>Monetization</li></a><br>
+  <a href="#Monetization"><li>Monetization</li></a><br>
   <a href="#Roadblocks"><li>Roadblocks</li></a><br>
   <a href="#conclusion"><li>conclusion</li></a><br><br>
 
@@ -135,15 +135,18 @@ Clients can place order by provoding necessary informations <br>
 
  <h2 id="#Technology">3.Technology</h2>
 
- <p>For this app i used android studio as the IDE. I used java to handel item clicks and other views.Relative layout, linearlayout, recyclerview, and other android widgets were used. To design i used XML code</p><br>
-
- <p>For Data management i have used both firebase. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale.</p>
-
+ <p>For this app i used android studio as the IDE. I used java to handel item clicks and other views.Relative layout, linearlayout, recyclerview, and other android widgets were used. To design i used XML code</p>
+ <p>For Data management i have used firebase.No design pattern was followed for making this app. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business.Firebase database is a noSql database and it stores data in tree format. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale.</p>
 
 
-<h2 id="#Design">4. Design Pattern</h2>
+
+<h2 id="#Monetization">4. Monetization</h2>
 <p>
-No design pattern was followed for making this app. Firebase database is a noSql database and it stores data in tree format.</p>
+The user will not pay any subscription fee to use this that means they will be able to use
+it for free but I will integrate google AdMob in this app. AdMob helps translate one’s hard
+work into earnings, Google AdMob makes it easy for developers to earn money from their
+app. That’s how the cost for developing this application will reimburse.
+</p>
 
 <h2>5. Roadblocks</h2>
 <p id="#Roadblocks">
