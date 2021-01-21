@@ -1,89 +1,146 @@
-<p style="text-align: center;">&nbsp;</p>
-<p style="text-align: center;">&nbsp;</p>
-<p align="center"><strong><img src="https://media.dhakatribune.com/uploads/2016/11/nsulogo.jpg" alt="" width="307" height="172" /></strong></p>
-<p align="center"><strong>North South University</strong></p>
-<p align="center">Department of Electrical &amp; Computer Engineering</p>
-<p align="center"><strong>Project Proposal</strong></p>
-<p align="center"><strong>Group No</strong>: 03</p>
-<p align="center"><strong>Fall 2020</strong></p>
-<p align="center"><strong>Project Name</strong>: Complete E-Commerce App </p>
-<p align="center"><strong>Course No</strong>: CSE 299 <strong>Sec</strong><strong>:</strong> 03</p>
-<p align="center"><strong>Faculty</strong>: Shaikh Shawon Arefin Shimon (Sas3)</p>
-<p align="center"><strong>Name</strong><strong>:</strong> Md. Abir Hossain </p>
-<p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1731597042</p>
-<p align="center"><strong>Email</strong><strong>:</strong> <a href="mailto:abir.hossain04@northsouth.edu"> abir.hossain04@northsouth.edu </a></p>
-<p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-FA20-CSE299-3/Group03">https://github.com/NSU-FA20-CSE299-3/Group03</a></p>
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>13/11/2020</p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-
-<p><strong>INTRODUCTION</strong></p>
-<p align=”justify”>In this modern global economy e-commerce platforms are getting more and more popular. Because e-commerce offers better marketing opportunities, more convenient, reduces cost and can make anyone’s business global. Here store remains open all the time. Users can order anything anytime, and it also have maximum security of transaction. Through this platform anyone can easily keep in touch with their customers. </p>
-<p align = "justify">I am planning to make an android application which will have all the functionalities of a
-modern e-commerce platform. Here users will find their various types of products such
-as clothing, shoes, watch, computer/laptop, jewelry, vehicle etc. They will make their
-own account in this app and from their account they will be able to order these</p>
+<p align="center">
+  <img width="250" height="280" src="Mockup/nsulogo.png">
+</p>                                        
 
 
-<p align=”justify”><strong>FEATURES</strong></p>
-<ul>
-<li>Easy sign in and sign up process.</li>
-<li>Update email and password.</li>
-<li>A complete user profile.</li>
-<li>Product search by name and category.</li>
-<li>Product rating and review.</li>
-<li>Sale and offers.</li>
-<li>Stock Quantity.</li>
-<li>Wish-list.</li>
-<li>Coupon system and redemption.</li>
-<li>Dialog option (For sign-in and editing quantity).</li>
-<li>Notification system.</li>
-<li>OTP system.</li>
-<li>Easy payment method.</li>
-<li>Order cancelation process.</li>
-</ul>
-
-<p><strong>TECHNOLOGY</strong></p>
-
-<p><em>Frontend: </em></p>
-<p align=”justify”>Android Studio is the official Integrated Development Environment (IDE) for Android app development. Android Studio offers features that enhance our productivity when building Android apps. I am going to use android studio to design my app and will use java to handle various operations. I will design buttons, images, layout, input field etc using Android Studio for this I will need XML.</p>
 
 
-<p><em>Backend: </em></p>
-<p align=”justify”>Firebase is Google’s mobile application development platform that helps us build, improve, and grow our app. Firebase lets us handle Email & password & Real-time data, Gives us Built-in security, Allows us file storage backed by Google Cloud Storage. I am going to use firebase as my database. And using firebase I’m going to handle backend.</p>
-
-<p><em>Payment method: </em></p>
-<p align=”justify”>Cash on delivery or will use API of other platforms to confirm payment like bkash, Paytm. Coupon system will also be available there.</p>
-
-<p><em>User Profile: </em></p>
-<p align=”justify”>Every user have will have their own profile. Where they will be able to add there information and later on if they want to update they will also be able to update those information.  They will also be able to add image to their profile.</p>
-
-<p><em>Search Option: </em></p>
-<p align=”justify”>The app will have multiple search option. The user will be able to search from search bar or they will also be able to search by categories.</p>
-
-<p><em>Review System: </em></p>
-<p align=”justify”>The app will have review system. Every user will be able to rate product. They will also be able to edit the rating the once gave.</p>
-
-<p><em>Reward System: </em></p>
-<p align=”justify”>The app will have a reward system users. Users will get coupon based on their amount of purchase. They will be able to use these coupons later on to buy different items. There will also be a coupon checking system. This way the app will be able to filter fake coupons.</p>
-
-<p><em>Stock update: </em></p>
-<p align=”justify”>Stock will update regularly if someone buy any product. This will also show out of stock if there is no product available.</p>
-
-<p><em>Dialog option: </em></p>
-<p align=”justify”>There will be dialog system so if someone doesn’t have account he will still be able to add products in his cart. But later on the dialog box will ask him to create an account. This dialog box will also help to edit his cart/ change quantity.</p>
-
-<p><em>Payment System: </em></p>
-<p align=”justify”>This app will have multiple payment system. Cash on delivery and online payment. For cash on delivery there will be OTP confirmation system. They will receive massage on their phone about order confirmation. Will also integrate bkash api/paytm for online payment.</p>
 
 
-<p><strong>Ecommerce with android</strong></p>
-<p align=”justify”>A huge number of people uses android phone in our country and over the world. So an E-commerce android application will be able to target a large group of people. And a lot of people will be able to get service from this app.</p>
 
-<p><strong>Monetization </strong></p>
-<p align=”justify”>The user will not pay any subscription fee to use this that means they will be able to use it for free but I will integrate google AdMob in this app. AdMob helps translate one’s hard work into earnings, Google AdMob makes it easy for developers to earn money from their app. That’s how the cost for developing this application will reimburse.</p>
 
-<p><strong>Social aspect</strong></p>
-<p align=”justify”>This app will have significant economic effect like reducing the transaction cost, it will reduce transaction costs by removing many of the geographic and time barriers that buyers and sellers previously faced. It will also save time of its users as it they will not have to go outside to buy their products.</p>
 
-<p><strong>References: </strong><a href="https://www.youtube.com/channel/UCNFVIu9YEb1fGPnPz-pTl0g"> Youtube</a></p>
+  <h1 align="center">Project Name: Shop Online</h1>
+  <h2 align ="center">Course Number: CSE299<br>
+  Section:03</br>
+  Group:03</br>
+  Semester: Fall 2020</br><br>
+  Faculty Name: Shaikh Shawon Arefin Shimon</h2>
+  <h3 align="center">Student Name: Md Abir Hossain<br>
+
+  Student ID: 1731597042<br>
+  Email: abir.hossain04@northsouth.edu <br><br>
+  Date prepared: 21/01/2020</h3><br><br><br>
+
+
+
+
+
+
+
+
+
+
+<h2> Project Name: Shop Online </h2><br>
+<h3 id="table-of-contents">Table of contents</h3>
+
+<ol>
+  <a href="#introduction"><li>Introduction</li><br></a>
+  <a href="#features"><li>Features</li><br></a>
+  <a href="#Technology"><li>Technology</li><br></a>
+  <a href="#Design"><li>Monetization</li></a><br>
+  <a href="#conclusion"><li>Roadblocks</li></a><br>
+   href="#conclusion"><li>Roadblocks</li></a><br><br>
+
+</ol>
+<br>
+
+
+<h2 id="#introduction">1. Introduction</h2>
+<h3>1.1 Project Idea:</h3>
+<p>In this modern global economy e-commerce platforms are getting more and more popular. Because e-commerce offers better marketing opportunities, more convenient, reduces cost and can make anyone’s business global. Here store remains open all the time. Users can order anything anytime, and it also have maximum security of transaction. Through this platform anyone can easily keep in touch with their customers.
+
+I tried to make an android application which will have all the functionalities of a modern e-commerce platform. Here users will find their various types of products such as clothing, shoes, watch, computer/laptop, jewelry, vehicle etc. They will make their own account in this app and from their account they will be able to order these
+</p>
+
+<h2 id="features">2. Features</h2>
+This project has the following features -
+<!--user regestration-->
+<h3>2.1 User Registration:</h3>
+  To access any platform users first have to register. Users must include userimage,username, firstname, lastname,email and password, phone number, address.
+   <br>
+   <br>
+ <p align="center">
+  <img width="200" height="420" src="images/userSignup.PNG"><br>
+ </p>
+ <!--vendor regestration-->
+ If the user is a vendor then he/she have to give some aditional information. Vendor must include delivery fee,shop name. 
+  <p align="center">
+ <img width="200" height="420" src="images/sellerSignUp.PNG"><br>
+ </p>
+
+ <h3>2.2 Login :</h3>
+  Clients and vendors will have to login by providing their email and password<br>
+  <br>
+
+
+  <p align="center">
+ <img width="200" height="420" src="images/login.PNG"><br>
+
+</p>
+<h3>2.3 Forgot Password:</h3>
+  Clients and vendors will be able to reset their passwords if they forgets their password<br>
+  <br>
+
+  <p align="center">
+ <img width="200" height="420" src="images/forgotPass.PNG"><br>
+
+</p>
+<br>
+<br>
+  <h3>2.4 Currently the following functions are available for clients -</h3>
+  <p>
+    * Clients can see all the restaurants that are nearby them.<br>
+      <p align="center">
+ <img width="200" height="420" src="images/clientHomePage.PNG"><br>
+</p>
+
+
+* Clients can enter those restaurants and see the details of those restaurants and the food items that are available there <br>
+ <p align="center">
+<img width="200" height="420" src="images/shopDetails.PNG"><br>
+</p>
+ * Clients can search foods by name or by category <br>
+<p align="center">
+ <img width="200" height="420" src="images/searchFoodName.PNG"><br>
+</p>
+ <p align="center">
+ <img width="200" height="420" src="images/searchFoodCat.PNG"><br>
+</p>
+ * Clients can can select those foods and add those foods to their cart</p> 
+ <p align="center">
+  <img width="200" height="420" src="images/addToCart.PNG"><br>
+</p>  
+<h3>2.5 Vendor Side:</h3>
+There is also a vendor side in this app<br>
+* Vendors will be able to see all the foods that are available when they logs in
+<p align="center">
+<img width="200" height="420" src="images/vendorHome.PNG"><br>
+</p>
+* Vendors will be able to add food items
+<p align="center">
+<img width="200" height="420" src="images/addFood.PNG"><br>
+</p>
+* Vendors will be search foods by category or name
+<p align="center">
+<img width="200" height="420" src="images/searchVCat.PNG"><br>
+</p>
+<p align="center">
+<img width="200" height="420" src="images/searchVN.PNG"><br>
+</p>
+* Vendors will be search remove foods
+<p align="center">
+<img width="200" height="420" src="images/removeFood.PNG"><br>
+</p>
+ <h2 id="#data">3.Data Management</h2>
+ <p>For Data management i have used both firebase and sqlite. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale. Sqlite was used to store the cart items that user was storing in his app </p>
+
+
+
+<h2 id="#Design">4. Design Pattern</h2>
+<p>
+No design pattern was followed for making this app. Firebase database is a noSql database and it stores data in tree format.</p>
+
+<h2>5. Roadblocks</h2>
+<p id="#Roadblocks">
+There are some roadblocks i had to face while making this app. First roadblock was google map integration. Google map does not give right location while working in emulator. So all the users and vendors are registering with same location for now. But when in mobile device it gets fixed. Then i faced a problem with resting passwor. Because I made a mistake while checking if its a correct email format. I did not use navigation drawer which i wanted to do. But could not do it becuse android got updated and now navigation activity comes with fragment. In search option i also faced some problem. While i was writing food category names the food was not appearing then i found out that my adapter name was wrong and fixed it. But still it has a problem i could not change the hints of the search as i give input into the search bar. And the last problem i faced today is showing the cart dialog to the client. In the logcat it shows me that i did not set adapter for my cart dialog but in code i did set the adapter. The app is not yet in a complete as i couldn't finish the ordering process. </p>
