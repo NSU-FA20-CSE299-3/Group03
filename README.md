@@ -40,7 +40,7 @@
   <a href="#Technology"><li>Technology</li><br></a>
   <a href="#Monetization"><li>Monetization</li></a><br>
   <a href="#Roadblocks"><li>Roadblocks</li></a><br>
-  <a href="#conclusion"><li>conclusion</li></a><br><br>
+  <a href="#conclusion"><li>Conclusion</li></a><br><br>
 
 </ol>
 <br>
@@ -107,7 +107,7 @@ This project has the following features -
  <img width="230" height="420" src="Mockup/ui7.PNG"><br>
 
 </p>
-<h3>2.5 See products:</h3>
+<h3>2.6 See products:</h3>
   Clients will be able to see products that are available<br>
   <br>
 
@@ -117,12 +117,12 @@ This project has the following features -
 </p>
 
 
-<h3>2.6 Add to cart:</h3>
+<h3>2.7 Add to cart:</h3>
  Clients can click those products and see the details of those and also add them to cart<br>
  <p align="center">
 <img width="230" height="420" src="Mockup/ui9.PNG"><br>
 </p>
-<h3>2.7 Cart Items:</h3>
+<h3>2.8 Cart Items:</h3>
 Clients can see cart items and total price. They can also delete item from cart <br>
 <p align="center">
  <img width="230" height="420" src="Mockup/ui10.PNG"><br>
@@ -150,7 +150,7 @@ app. That’s how the cost for developing this application will reimburse.
 
 <h2>5. Roadblocks</h2>
 <p id="#Roadblocks">
-There are some roadblocks i had to face while making this app. I faced most of the problem with navigation drawer. Android navigation drawer got updated and now the navigation drawer comes with fragmanents. I tried to implement recyclerView in fragment but could not do it. So i created a new activity to show products. While designing I also faced problem with elegent button library. But from manifest I was able to fix that problem. I cart activity my edit button is not working properly but delete button is working fine. In firebase i also faced some problem. At first while connecting firebase to my app i tried the old method which is copyiing the ssh1 code from my app and the paste it on firebase. Then the firebase was getting connected but the realtime database was not working though i added dependency in build.gradle(app). Then i created another new project and connected firebase from tools then it was working fine.Later on after a month i again faced another problem with realtime database because i opened the app in Test Mode which is an insecure mode where users get permission to read and write in the database. But google only allows this mode for one month. And was not allowing the users to login to the app or signup. Then i changed the realtime database rule manually and it started working just fine.  The app is not yet in a complete as i couldn't finish the order confirming process from admin panel. </p>
+There are some roadblocks i had to face while making this app. I faced most of the problem with navigation drawer. Android navigation drawer got updated and now the navigation drawer comes with fragmanents. I tried to implement recyclerView in fragment but could not do it. So i created a new activity to show products. While designing I also faced problem with elegent button library. But from manifest I was able to fix that problem. I cart activity my edit button is not working properly but delete button is working fine. In firebase i also faced some problem. At first while connecting firebase to my app i tried the old method which is copyiing the ssh1 code from my app and the paste it on firebase. Then the firebase was getting connected but the realtime database was not working though i added dependency in build.gradle(app). Then i created another new project and connected firebase from tools then it was working fine.Later on after a month i again faced another problem with realtime database because i opened the app in Test Mode which is an insecure mode where users get permission to read and write in the database. But google only allows this mode for one month. And was not allowing the users to login to the app or signup. Then i changed the realtime database rule manually and it started working just fine.And justification in readme.md wasn't possible when writing report or keeping the initial project proposal in markdown format. But in html format it works just fine. </p>
 <h2>6. Conclusion</h2>
 <p id="#conclusion">
 A huge number of people uses android phone in our country and over the world. So an
