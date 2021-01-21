@@ -39,8 +39,8 @@
   <a href="#features"><li>Features</li><br></a>
   <a href="#Technology"><li>Technology</li><br></a>
   <a href="#Design"><li>Monetization</li></a><br>
-  <a href="#conclusion"><li>Roadblocks</li></a><br>
-   href="#conclusion"><li>Roadblocks</li></a><br><br>
+  <a href="#Roadblocks"><li>Roadblocks</li></a><br>
+  <a href="#conclusion"><li>conclusion</li></a><br><br>
 
 </ol>
 <br>
@@ -56,82 +56,83 @@ I tried to make an android application which will have all the functionalities o
 <h2 id="features">2. Features</h2>
 This project has the following features -
 <!--user regestration-->
-<h3>2.1 User Registration:</h3>
-  To access any platform users first have to register. Users must include userimage,username, firstname, lastname,email and password, phone number, address.
+<h3>2.1 Splash Screen:</h3>
+  At first user will see a splash screen which will load for some time
    <br>
    <br>
  <p align="center">
-  <img width="200" height="420" src="images/userSignup.PNG"><br>
+  <img width="200" height="420" src="Mockup/ui1.PNG"><br>
  </p>
- <!--vendor regestration-->
- If the user is a vendor then he/she have to give some aditional information. Vendor must include delivery fee,shop name. 
-  <p align="center">
- <img width="200" height="420" src="images/sellerSignUp.PNG"><br>
+ <h3>2.2 Choose Option:</h3>
+  Then users will get option to login or signup
+   <br>
+   <br>
+ <p align="center">
+  <img width="200" height="420" src="Mockup/ui2.PNG"><br>
  </p>
 
- <h3>2.2 Login :</h3>
-  Clients and vendors will have to login by providing their email and password<br>
+<h3>2.3 User Registration:</h3>
+  User must register if he/she does not have an account. Users must include name,phonenumber, password .
+   <br>
+   <br>
+ <p align="center">
+  <img width="200" height="420" src="Mockup/reg.PNG"><br>
+ </p>
+ <h3>2.4 User Login:</h3>
+  User can login by providing phone number and passsword
+   <br>
+   <br>
+ <p align="center">
+  <img width="200" height="420" src="Mockup/ui3.PNG"><br>
+ </p>
+ 
+ If the user is an Admin then after login he/she will see categories to add product 
+  <p align="center">
+  <img width="200" height="420" src="Mockup/ui4.PNG"><br>
+ </p>
+
+  Then admins will give necessery information and add product<br>
   <br>
 
 
   <p align="center">
- <img width="200" height="420" src="images/login.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui5.PNG"><br>
 
 </p>
-<h3>2.3 Forgot Password:</h3>
-  Clients and vendors will be able to reset their passwords if they forgets their password<br>
+<h3>2.5 Client Navbar:</h3>
+  Clients will be able to see navbar in their homepage to go to different activities<br>
   <br>
 
   <p align="center">
- <img width="200" height="420" src="images/forgotPass.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui7.PNG"><br>
 
 </p>
-<br>
-<br>
-  <h3>2.4 Currently the following functions are available for clients -</h3>
-  <p>
-    * Clients can see all the restaurants that are nearby them.<br>
-      <p align="center">
- <img width="200" height="420" src="images/clientHomePage.PNG"><br>
+<h3>2.5 See products:</h3>
+  Clients will be able to see products that are available<br>
+  <br>
+
+  <p align="center">
+ <img width="200" height="420" src="Mockup/ui8.PNG"><br>
+
 </p>
 
 
-* Clients can enter those restaurants and see the details of those restaurants and the food items that are available there <br>
+<h3>2.6 Add to cart:</h3>
+ Clients can click those products and see the details of those and also add them to cart<br>
  <p align="center">
-<img width="200" height="420" src="images/shopDetails.PNG"><br>
+<img width="200" height="420" src="Mockup/ui9.PNG.PNG"><br>
 </p>
- * Clients can search foods by name or by category <br>
+<h3>2.7 Cart Items:</h3>
+Clients can see cart items and total price. They can also delete item from cart <br>
 <p align="center">
- <img width="200" height="420" src="images/searchFoodName.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui10.PNG.PNG"><br>
 </p>
- <p align="center">
- <img width="200" height="420" src="images/searchFoodCat.PNG"><br>
-</p>
- * Clients can can select those foods and add those foods to their cart</p> 
- <p align="center">
-  <img width="200" height="420" src="images/addToCart.PNG"><br>
-</p>  
-<h3>2.5 Vendor Side:</h3>
-There is also a vendor side in this app<br>
-* Vendors will be able to see all the foods that are available when they logs in
+<h3>2.9 Place Order:</h3>
+Clients can place order by provoding necessary informations <br>
 <p align="center">
-<img width="200" height="420" src="images/vendorHome.PNG"><br>
+ <img width="200" height="420" src="Mockup/ui11.PNG.PNG"><br>
 </p>
-* Vendors will be able to add food items
-<p align="center">
-<img width="200" height="420" src="images/addFood.PNG"><br>
-</p>
-* Vendors will be search foods by category or name
-<p align="center">
-<img width="200" height="420" src="images/searchVCat.PNG"><br>
-</p>
-<p align="center">
-<img width="200" height="420" src="images/searchVN.PNG"><br>
-</p>
-* Vendors will be search remove foods
-<p align="center">
-<img width="200" height="420" src="images/removeFood.PNG"><br>
-</p>
+
  <h2 id="#data">3.Data Management</h2>
  <p>For Data management i have used both firebase and sqlite. In this app firebase was widely used.Firebase is Google's mobile platform that helps you quickly develop high-quality apps and grow your business. This apps login registration is done by firebase authentication.Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime. I used firebase realtime database to keep the user data. And for storing the images i used firebase storage.Cloud Storage for Firebase is a powerful, simple, and cost-effective object storage service built for Google scale. Sqlite was used to store the cart items that user was storing in his app </p>
 
